@@ -1,0 +1,986 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>&lt;no title&gt; &#8212; My sample book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'DBaver';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Welcome to your Jupyter Book" href="intro.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="My sample book - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="My sample book - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Welcome to your Jupyter Book
+                </a>
+            </li>
+        </ul>
+        
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FDBaver.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/DBaver.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1><no title></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>mysql-connector-python<span class="w"> </span>psycopg2<span class="w"> </span>pandas<span class="w"> </span>sqlalchemy
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>^C
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting mysql-connector-python
+  Using cached mysql_connector_python-9.2.0-cp313-cp313-win_amd64.whl.metadata (6.2 kB)
+Requirement already satisfied: psycopg2 in c:\users\lenovo\appdata\local\programs\python\python313\lib\site-packages (2.9.10)
+Collecting pandas
+  Using cached pandas-2.2.3-cp313-cp313-win_amd64.whl.metadata (19 kB)
+Requirement already satisfied: sqlalchemy in c:\users\lenovo\appdata\local\programs\python\python313\lib\site-packages (2.0.38)
+Requirement already satisfied: numpy&gt;=1.26.0 in c:\users\lenovo\appdata\local\programs\python\python313\lib\site-packages (from pandas) (2.2.3)
+Requirement already satisfied: python-dateutil&gt;=2.8.2 in c:\users\lenovo\appdata\local\programs\python\python313\lib\site-packages (from pandas) (2.9.0.post0)
+Collecting pytz&gt;=2020.1 (from pandas)
+  Using cached pytz-2025.1-py2.py3-none-any.whl.metadata (22 kB)
+Collecting tzdata&gt;=2022.7 (from pandas)
+  Using cached tzdata-2025.1-py2.py3-none-any.whl.metadata (1.4 kB)
+Requirement already satisfied: greenlet!=0.4.17 in c:\users\lenovo\appdata\local\programs\python\python313\lib\site-packages (from sqlalchemy) (3.1.1)
+Requirement already satisfied: typing-extensions&gt;=4.6.0 in c:\users\lenovo\appdata\roaming\python\python313\site-packages (from sqlalchemy) (4.12.2)
+Requirement already satisfied: six&gt;=1.5 in c:\users\lenovo\appdata\local\programs\python\python313\lib\site-packages (from python-dateutil&gt;=2.8.2-&gt;pandas) (1.17.0)
+Using cached mysql_connector_python-9.2.0-cp313-cp313-win_amd64.whl (16.1 MB)
+Downloading pandas-2.2.3-cp313-cp313-win_amd64.whl (11.5 MB)
+   ---------------------------------------- 0.0/11.5 MB ? eta -:--:--
+   -- ------------------------------------- 0.8/11.5 MB 4.9 MB/s eta 0:00:03
+   -- ------------------------------------- 0.8/11.5 MB 4.9 MB/s eta 0:00:03
+   -- ------------------------------------- 0.8/11.5 MB 4.9 MB/s eta 0:00:03
+   -- ------------------------------------- 0.8/11.5 MB 4.9 MB/s eta 0:00:03
+   -- ------------------------------------- 0.8/11.5 MB 4.9 MB/s eta 0:00:03
+   -- ------------------------------------- 0.8/11.5 MB 4.9 MB/s eta 0:00:03
+   -- ------------------------------------- 0.8/11.5 MB 4.9 MB/s eta 0:00:03
+   -- ------------------------------------- 0.8/11.5 MB 4.9 MB/s eta 0:00:03
+   -- ------------------------------------- 0.8/11.5 MB 4.9 MB/s eta 0:00:03
+   -- ------------------------------------- 0.8/11.5 MB 4.9 MB/s eta 0:00:03
+   -- ------------------------------------- 0.8/11.5 MB 4.9 MB/s eta 0:00:03
+   -- ------------------------------------- 0.8/11.5 MB 4.9 MB/s eta 0:00:03
+   -- ------------------------------------- 0.8/11.5 MB 4.9 MB/s eta 0:00:03
+   -- ------------------------------------- 0.8/11.5 MB 4.9 MB/s eta 0:00:03
+   -- ------------------------------------- 0.8/11.5 MB 4.9 MB/s eta 0:00:03
+   -- ------------------------------------- 0.8/11.5 MB 4.9 MB/s eta 0:00:03
+   -- ------------------------------------- 0.8/11.5 MB 4.9 MB/s eta 0:00:03
+   -- ------------------------------------- 0.8/11.5 MB 4.9 MB/s eta 0:00:03
+   -- ------------------------------------- 0.8/11.5 MB 4.9 MB/s eta 0:00:03
+   -- ------------------------------------- 0.8/11.5 MB 4.9 MB/s eta 0:00:03
+   -- ------------------------------------- 0.8/11.5 MB 4.9 MB/s eta 0:00:03
+   --- ------------------------------------ 1.0/11.5 MB 175.5 kB/s eta 0:01:00
+   --- ------------------------------------ 1.0/11.5 MB 175.5 kB/s eta 0:01:00
+   ---- ----------------------------------- 1.3/11.5 MB 215.0 kB/s eta 0:00:48
+   ----- ---------------------------------- 1.6/11.5 MB 257.6 kB/s eta 0:00:39
+   ------ --------------------------------- 1.8/11.5 MB 298.3 kB/s eta 0:00:33
+   -------- ------------------------------- 2.4/11.5 MB 380.9 kB/s eta 0:00:24
+   ---------- ----------------------------- 2.9/11.5 MB 454.0 kB/s eta 0:00:19
+   ---------- ----------------------------- 2.9/11.5 MB 454.0 kB/s eta 0:00:19
+   ---------- ----------------------------- 3.1/11.5 MB 467.5 kB/s eta 0:00:18
+   ---------- ----------------------------- 3.1/11.5 MB 467.5 kB/s eta 0:00:18
+   ---------- ----------------------------- 3.1/11.5 MB 467.5 kB/s eta 0:00:18
+   ----------- ---------------------------- 3.4/11.5 MB 459.5 kB/s eta 0:00:18
+   ----------- ---------------------------- 3.4/11.5 MB 459.5 kB/s eta 0:00:18
+   ----------- ---------------------------- 3.4/11.5 MB 459.5 kB/s eta 0:00:18
+   ------------ --------------------------- 3.7/11.5 MB 457.9 kB/s eta 0:00:18
+   ------------ --------------------------- 3.7/11.5 MB 457.9 kB/s eta 0:00:18
+   ------------- -------------------------- 3.9/11.5 MB 465.4 kB/s eta 0:00:17
+   ------------- -------------------------- 3.9/11.5 MB 465.4 kB/s eta 0:00:17
+   -------------- ------------------------- 4.2/11.5 MB 475.7 kB/s eta 0:00:16
+   -------------- ------------------------- 4.2/11.5 MB 475.7 kB/s eta 0:00:16
+   --------------- ------------------------ 4.5/11.5 MB 491.4 kB/s eta 0:00:15
+   ----------------- ---------------------- 5.0/11.5 MB 528.7 kB/s eta 0:00:13
+   ----------------- ---------------------- 5.0/11.5 MB 528.7 kB/s eta 0:00:13
+   ------------------ --------------------- 5.2/11.5 MB 543.7 kB/s eta 0:00:12
+   ------------------- -------------------- 5.5/11.5 MB 555.5 kB/s eta 0:00:11
+   -------------------- ------------------- 5.8/11.5 MB 566.1 kB/s eta 0:00:11
+   -------------------- ------------------- 5.8/11.5 MB 566.1 kB/s eta 0:00:11
+   --------------------- ------------------ 6.0/11.5 MB 569.2 kB/s eta 0:00:10
+   --------------------- ------------------ 6.0/11.5 MB 569.2 kB/s eta 0:00:10
+   --------------------- ------------------ 6.0/11.5 MB 569.2 kB/s eta 0:00:10
+   --------------------- ------------------ 6.0/11.5 MB 569.2 kB/s eta 0:00:10
+   --------------------- ------------------ 6.0/11.5 MB 569.2 kB/s eta 0:00:10
+   --------------------- ------------------ 6.0/11.5 MB 569.2 kB/s eta 0:00:10
+   --------------------- ------------------ 6.0/11.5 MB 569.2 kB/s eta 0:00:10
+   --------------------- ------------------ 6.0/11.5 MB 569.2 kB/s eta 0:00:10
+   --------------------- ------------------ 6.0/11.5 MB 569.2 kB/s eta 0:00:10
+   --------------------- ------------------ 6.3/11.5 MB 501.4 kB/s eta 0:00:11
+   --------------------- ------------------ 6.3/11.5 MB 501.4 kB/s eta 0:00:11
+   ---------------------- ----------------- 6.6/11.5 MB 506.6 kB/s eta 0:00:10
+   ----------------------- ---------------- 6.8/11.5 MB 516.8 kB/s eta 0:00:10
+   ------------------------ --------------- 7.1/11.5 MB 527.4 kB/s eta 0:00:09
+   ------------------------ --------------- 7.1/11.5 MB 527.4 kB/s eta 0:00:09
+   ------------------------ --------------- 7.1/11.5 MB 527.4 kB/s eta 0:00:09
+   ------------------------ --------------- 7.1/11.5 MB 527.4 kB/s eta 0:00:09
+   ------------------------ --------------- 7.1/11.5 MB 527.4 kB/s eta 0:00:09
+   ------------------------ --------------- 7.1/11.5 MB 527.4 kB/s eta 0:00:09
+   ------------------------ --------------- 7.1/11.5 MB 527.4 kB/s eta 0:00:09
+   ------------------------- -------------- 7.3/11.5 MB 497.4 kB/s eta 0:00:09
+   ------------------------- -------------- 7.3/11.5 MB 497.4 kB/s eta 0:00:09
+   -------------------------- ------------- 7.6/11.5 MB 499.8 kB/s eta 0:00:08
+   --------------------------- ------------ 7.9/11.5 MB 509.5 kB/s eta 0:00:08
+   ----------------------------- ---------- 8.4/11.5 MB 533.4 kB/s eta 0:00:06
+   ------------------------------ --------- 8.7/11.5 MB 543.5 kB/s eta 0:00:06
+   ------------------------------ --------- 8.7/11.5 MB 543.5 kB/s eta 0:00:06
+   ------------------------------- -------- 8.9/11.5 MB 547.6 kB/s eta 0:00:05
+   ------------------------------- -------- 8.9/11.5 MB 547.6 kB/s eta 0:00:05
+   ------------------------------- -------- 8.9/11.5 MB 547.6 kB/s eta 0:00:05
+   ------------------------------- -------- 8.9/11.5 MB 547.6 kB/s eta 0:00:05
+   ------------------------------- -------- 8.9/11.5 MB 547.6 kB/s eta 0:00:05
+   ------------------------------- -------- 8.9/11.5 MB 547.6 kB/s eta 0:00:05
+   ------------------------------- -------- 8.9/11.5 MB 547.6 kB/s eta 0:00:05
+   ------------------------------- -------- 9.2/11.5 MB 515.5 kB/s eta 0:00:05
+   ------------------------------- -------- 9.2/11.5 MB 515.5 kB/s eta 0:00:05
+   --------------------------------- ------ 9.7/11.5 MB 531.6 kB/s eta 0:00:04
+   ---------------------------------- ----- 10.0/11.5 MB 539.6 kB/s eta 0:00:03
+   ---------------------------------- ----- 10.0/11.5 MB 539.6 kB/s eta 0:00:03
+   ----------------------------------- ---- 10.2/11.5 MB 543.3 kB/s eta 0:00:03
+   ----------------------------------- ---- 10.2/11.5 MB 543.3 kB/s eta 0:00:03
+   ------------------------------------ --- 10.5/11.5 MB 547.8 kB/s eta 0:00:02
+   ------------------------------------ --- 10.5/11.5 MB 547.8 kB/s eta 0:00:02
+   ------------------------------------- -- 10.7/11.5 MB 550.0 kB/s eta 0:00:02
+   -------------------------------------- - 11.0/11.5 MB 555.6 kB/s eta 0:00:01
+   ---------------------------------------  11.3/11.5 MB 563.2 kB/s eta 0:00:01
+   ---------------------------------------- 11.5/11.5 MB 567.3 kB/s eta 0:00:00
+Downloading pytz-2025.1-py2.py3-none-any.whl (507 kB)
+Downloading tzdata-2025.1-py2.py3-none-any.whl (346 kB)
+Installing collected packages: pytz, tzdata, mysql-connector-python, pandas
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>python-dotenv
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: python-dotenv in /usr/local/lib/python3.11/dist-packages (1.0.1)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>--upgrade<span class="w"> </span>python-dotenv
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: python-dotenv in /usr/local/lib/python3.11/dist-packages (1.0.1)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>pymysql<span class="w"> </span>psycopg2<span class="w"> </span>pandas<span class="w"> </span>sqlalchemy
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: pymysql in /usr/local/lib/python3.11/dist-packages (1.1.1)
+Requirement already satisfied: psycopg2 in /usr/local/lib/python3.11/dist-packages (2.9.10)
+Requirement already satisfied: pandas in /usr/local/lib/python3.11/dist-packages (2.2.2)
+Requirement already satisfied: sqlalchemy in /usr/local/lib/python3.11/dist-packages (2.0.38)
+Requirement already satisfied: numpy&gt;=1.23.2 in /usr/local/lib/python3.11/dist-packages (from pandas) (1.26.4)
+Requirement already satisfied: python-dateutil&gt;=2.8.2 in /usr/local/lib/python3.11/dist-packages (from pandas) (2.8.2)
+Requirement already satisfied: pytz&gt;=2020.1 in /usr/local/lib/python3.11/dist-packages (from pandas) (2025.1)
+Requirement already satisfied: tzdata&gt;=2022.7 in /usr/local/lib/python3.11/dist-packages (from pandas) (2025.1)
+Requirement already satisfied: greenlet!=0.4.17 in /usr/local/lib/python3.11/dist-packages (from sqlalchemy) (3.1.1)
+Requirement already satisfied: typing-extensions&gt;=4.6.0 in /usr/local/lib/python3.11/dist-packages (from sqlalchemy) (4.12.2)
+Requirement already satisfied: six&gt;=1.5 in /usr/local/lib/python3.11/dist-packages (from python-dateutil&gt;=2.8.2-&gt;pandas) (1.17.0)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># import pandas as pd</span>
+<span class="c1"># from sqlalchemy import create_engine</span>
+
+<span class="c1"># # Koneksi ke MySQL</span>
+<span class="c1"># mysql_user = &quot;avnadmin&quot;</span>
+<span class="c1"># mysql_password = &quot;AVNS_dwDXpM3IJ7R7UAYZAUo&quot;</span>
+<span class="c1"># mysql_host = &quot;mysql-1bc61343-irismysql124.g.aivencloud.com&quot;</span>
+<span class="c1"># mysql_port = &quot;24461&quot;</span>
+<span class="c1"># mysql_db = &quot;defaultdb&quot;</span>
+
+<span class="c1"># mysql_engine = create_engine(f&quot;mysql+pymysql://{mysql_user}:{mysql_password}@{mysql_host}:{mysql_port}/{mysql_db}&quot;)</span>
+
+<span class="c1"># # Koneksi ke PostgreSQL</span>
+<span class="c1"># pg_user = &quot;avnadmin&quot;</span>
+<span class="c1"># pg_password = &quot;AVNS_JJrEiXaVb3VV6gHL57q&quot;</span>
+<span class="c1"># pg_host = &quot;pg-5dfd4f6-irispostgresql124.g.aivencloud.com&quot;</span>
+<span class="c1"># pg_port = &quot;22833&quot;</span>
+<span class="c1"># pg_db = &quot;defaultdb&quot;</span>
+
+<span class="c1"># pg_engine = create_engine(f&quot;postgresql+psycopg2://{pg_user}:{pg_password}@{pg_host}:{pg_port}/{pg_db}&quot;)</span>
+
+<span class="c1"># # Ambil data dari MySQL</span>
+<span class="c1"># query_mysql = &#39;SELECT id, &quot;Class&quot;, petal_length, petal_width FROM iris_data&#39;</span>
+<span class="c1"># df_mysql = pd.read_sql(query_mysql, mysql_engine)</span>
+
+<span class="c1"># # Ambil data dari PostgreSQL</span>
+<span class="c1"># query_pg = &#39;SELECT id, &quot;Class&quot;, sepal_length, sepal_width FROM postgresql&#39;</span>
+<span class="c1"># df_pg = pd.read_sql(query_pg, pg_engine)</span>
+
+<span class="c1"># # Gabungkan berdasarkan id dan Class (full outer join untuk menjaga semua data)</span>
+<span class="c1"># df_combined = pd.merge(df_mysql, df_pg, on=[&quot;id&quot;, &quot;Class&quot;], how=&quot;outer&quot;)</span>
+
+<span class="c1"># # Simpan ke CSV tanpa mengubah nilai NaN</span>
+<span class="c1"># df_combined.to_csv(&quot;combined_iris.csv&quot;, index=False)</span>
+
+<span class="c1"># # Print hasil gabungan tanpa indeks tambahan</span>
+<span class="c1"># print(df_combined.to_string(index=False))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Install library tambahan jika belum ada</span>
+<span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>sqlalchemy<span class="w"> </span>pymysql<span class="w"> </span>psycopg2<span class="w"> </span>seaborn
+
+<span class="c1"># Import library yang dibutuhkan</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">seaborn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sns</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sqlalchemy</span><span class="w"> </span><span class="kn">import</span> <span class="n">create_engine</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">dotenv</span><span class="w"> </span><span class="kn">import</span> <span class="n">load_dotenv</span>
+
+<span class="c1"># Load file .env</span>
+<span class="n">load_dotenv</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: sqlalchemy in /usr/local/lib/python3.11/dist-packages (2.0.38)
+Requirement already satisfied: pymysql in /usr/local/lib/python3.11/dist-packages (1.1.1)
+Requirement already satisfied: psycopg2 in /usr/local/lib/python3.11/dist-packages (2.9.10)
+Requirement already satisfied: seaborn in /usr/local/lib/python3.11/dist-packages (0.13.2)
+Requirement already satisfied: greenlet!=0.4.17 in /usr/local/lib/python3.11/dist-packages (from sqlalchemy) (3.1.1)
+Requirement already satisfied: typing-extensions&gt;=4.6.0 in /usr/local/lib/python3.11/dist-packages (from sqlalchemy) (4.12.2)
+Requirement already satisfied: numpy!=1.24.0,&gt;=1.20 in /usr/local/lib/python3.11/dist-packages (from seaborn) (1.26.4)
+Requirement already satisfied: pandas&gt;=1.2 in /usr/local/lib/python3.11/dist-packages (from seaborn) (2.2.2)
+Requirement already satisfied: matplotlib!=3.6.1,&gt;=3.4 in /usr/local/lib/python3.11/dist-packages (from seaborn) (3.10.0)
+Requirement already satisfied: contourpy&gt;=1.0.1 in /usr/local/lib/python3.11/dist-packages (from matplotlib!=3.6.1,&gt;=3.4-&gt;seaborn) (1.3.1)
+Requirement already satisfied: cycler&gt;=0.10 in /usr/local/lib/python3.11/dist-packages (from matplotlib!=3.6.1,&gt;=3.4-&gt;seaborn) (0.12.1)
+Requirement already satisfied: fonttools&gt;=4.22.0 in /usr/local/lib/python3.11/dist-packages (from matplotlib!=3.6.1,&gt;=3.4-&gt;seaborn) (4.56.0)
+Requirement already satisfied: kiwisolver&gt;=1.3.1 in /usr/local/lib/python3.11/dist-packages (from matplotlib!=3.6.1,&gt;=3.4-&gt;seaborn) (1.4.8)
+Requirement already satisfied: packaging&gt;=20.0 in /usr/local/lib/python3.11/dist-packages (from matplotlib!=3.6.1,&gt;=3.4-&gt;seaborn) (24.2)
+Requirement already satisfied: pillow&gt;=8 in /usr/local/lib/python3.11/dist-packages (from matplotlib!=3.6.1,&gt;=3.4-&gt;seaborn) (11.1.0)
+Requirement already satisfied: pyparsing&gt;=2.3.1 in /usr/local/lib/python3.11/dist-packages (from matplotlib!=3.6.1,&gt;=3.4-&gt;seaborn) (3.2.1)
+Requirement already satisfied: python-dateutil&gt;=2.7 in /usr/local/lib/python3.11/dist-packages (from matplotlib!=3.6.1,&gt;=3.4-&gt;seaborn) (2.8.2)
+Requirement already satisfied: pytz&gt;=2020.1 in /usr/local/lib/python3.11/dist-packages (from pandas&gt;=1.2-&gt;seaborn) (2025.1)
+Requirement already satisfied: tzdata&gt;=2022.7 in /usr/local/lib/python3.11/dist-packages (from pandas&gt;=1.2-&gt;seaborn) (2025.1)
+Requirement already satisfied: six&gt;=1.5 in /usr/local/lib/python3.11/dist-packages (from python-dateutil&gt;=2.7-&gt;matplotlib!=3.6.1,&gt;=3.4-&gt;seaborn) (1.17.0)
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Koneksi ke MySQL</span>
+<span class="n">mysql_user</span> <span class="o">=</span> <span class="s2">&quot;avnadmin&quot;</span>
+<span class="n">mysql_password</span> <span class="o">=</span> <span class="s2">&quot;AVNS_dwDXpM3IJ7R7UAYZAUo&quot;</span>
+<span class="n">mysql_host</span> <span class="o">=</span> <span class="s2">&quot;mysql-1bc61343-irismysql124.g.aivencloud.com&quot;</span>
+<span class="n">mysql_port</span> <span class="o">=</span> <span class="s2">&quot;24461&quot;</span>
+<span class="n">mysql_db</span> <span class="o">=</span> <span class="s2">&quot;defaultdb&quot;</span>
+
+<span class="c1"># Membuat koneksi engine ke MySQL</span>
+<span class="n">mysql_engine</span> <span class="o">=</span> <span class="n">create_engine</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;mysql+pymysql://</span><span class="si">{</span><span class="n">mysql_user</span><span class="si">}</span><span class="s2">:</span><span class="si">{</span><span class="n">mysql_password</span><span class="si">}</span><span class="s2">@</span><span class="si">{</span><span class="n">mysql_host</span><span class="si">}</span><span class="s2">:</span><span class="si">{</span><span class="n">mysql_port</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">mysql_db</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;✅ Koneksi ke MySQL berhasil!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>✅ Koneksi ke MySQL berhasil!
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Koneksi ke PostgreSQL</span>
+<span class="n">pg_user</span> <span class="o">=</span> <span class="s2">&quot;avnadmin&quot;</span>
+<span class="n">pg_password</span> <span class="o">=</span> <span class="s2">&quot;AVNS_JJrEiXaVb3VV6gHL57q&quot;</span>
+<span class="n">pg_host</span> <span class="o">=</span> <span class="s2">&quot;pg-5dfd4f6-irispostgresql124.g.aivencloud.com&quot;</span>
+<span class="n">pg_port</span> <span class="o">=</span> <span class="s2">&quot;22833&quot;</span>
+<span class="n">pg_db</span> <span class="o">=</span> <span class="s2">&quot;defaultdb&quot;</span>
+
+<span class="c1"># Membuat koneksi engine ke PostgreSQL</span>
+<span class="n">pg_engine</span> <span class="o">=</span> <span class="n">create_engine</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;postgresql+psycopg2://</span><span class="si">{</span><span class="n">pg_user</span><span class="si">}</span><span class="s2">:</span><span class="si">{</span><span class="n">pg_password</span><span class="si">}</span><span class="s2">@</span><span class="si">{</span><span class="n">pg_host</span><span class="si">}</span><span class="s2">:</span><span class="si">{</span><span class="n">pg_port</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">pg_db</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;✅ Koneksi ke PostgreSQL berhasil!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>✅ Koneksi ke PostgreSQL berhasil!
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Ambil data dari MySQL</span>
+<span class="n">query_mysql</span> <span class="o">=</span> <span class="s1">&#39;SELECT id, Class, petal_length, petal_width FROM iris_data&#39;</span>
+<span class="n">df_mysql</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_sql</span><span class="p">(</span><span class="n">query_mysql</span><span class="p">,</span> <span class="n">mysql_engine</span><span class="p">)</span>
+
+<span class="c1"># Ambil data dari PostgreSQL (pastikan nama tabel benar)</span>
+<span class="n">query_pg</span> <span class="o">=</span> <span class="s1">&#39;SELECT id, &quot;Class&quot;, sepal_length, sepal_width FROM postgresql&#39;</span>
+<span class="n">df_pg</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_sql</span><span class="p">(</span><span class="n">query_pg</span><span class="p">,</span> <span class="n">pg_engine</span><span class="p">)</span>
+
+<span class="c1"># Tampilkan beberapa baris pertama dari masing-masing dataset</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;📌 Data dari MySQL:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df_mysql</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">📌 Data dari PostgreSQL:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df_pg</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>📌 Data dari MySQL:
+   id        Class  petal_length  petal_width
+0   1  Iris-setosa           5.1          3.5
+1   2  Iris-setosa           4.9          3.0
+2   3  Iris-setosa           4.7          3.2
+3   4  Iris-setosa           4.6          3.1
+4   5  Iris-setosa           5.0          3.6
+
+📌 Data dari PostgreSQL:
+   id        Class  sepal_length  sepal_width
+0   1  Iris-setosa           5.1          3.5
+1   2  Iris-setosa           4.9          3.0
+2   3  Iris-setosa           4.7          3.2
+3   4  Iris-setosa           4.6          3.1
+4   5  Iris-setosa           5.0          3.6
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Gabungkan data berdasarkan id dan Class</span>
+<span class="n">df_combined</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">df_mysql</span><span class="p">,</span> <span class="n">df_pg</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">,</span> <span class="s2">&quot;Class&quot;</span><span class="p">],</span> <span class="n">how</span><span class="o">=</span><span class="s2">&quot;outer&quot;</span><span class="p">)</span>
+
+<span class="c1"># Simpan hasil gabungan ke dalam file CSV</span>
+<span class="n">df_combined</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;combined_iris.csv&quot;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;✅ Data berhasil digabungkan dan disimpan dalam &#39;combined_iris.csv&#39;&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Dimensi DataFrame:&quot;</span><span class="p">,</span> <span class="n">df_combined</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>  <span class="c1"># Menampilkan jumlah baris &amp; kolom</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>✅ Data berhasil digabungkan dan disimpan dalam &#39;combined_iris.csv&#39;
+
+Dimensi DataFrame: (150, 6)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Tipe Data</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">📌 Tipe Data pada Setiap Kolom:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df_combined</span><span class="o">.</span><span class="n">dtypes</span><span class="p">)</span>
+
+<span class="c1"># Cek Missing Values</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">📌 Jumlah Missing Values:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df_combined</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+
+<span class="c1"># Statistik Deskriptif</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">📌 Statistik Deskriptif:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df_combined</span><span class="o">.</span><span class="n">describe</span><span class="p">())</span>
+
+<span class="c1"># Distribusi Class</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">📌 Distribusi Class:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df_combined</span><span class="p">[</span><span class="s2">&quot;Class&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>📌 Tipe Data pada Setiap Kolom:
+id                int64
+Class            object
+petal_length    float64
+petal_width     float64
+sepal_length    float64
+sepal_width     float64
+dtype: object
+
+📌 Jumlah Missing Values:
+id              0
+Class           0
+petal_length    0
+petal_width     0
+sepal_length    0
+sepal_width     0
+dtype: int64
+
+📌 Statistik Deskriptif:
+               id  petal_length  petal_width  sepal_length  sepal_width
+count  150.000000    150.000000   150.000000    150.000000   150.000000
+mean    75.500000      5.843333     3.054000      5.843333     3.054000
+std     43.445368      0.828066     0.433594      0.828066     0.433594
+min      1.000000      4.300000     2.000000      4.300000     2.000000
+25%     38.250000      5.100000     2.800000      5.100000     2.800000
+50%     75.500000      5.800000     3.000000      5.800000     3.000000
+75%    112.750000      6.400000     3.300000      6.400000     3.300000
+max    150.000000      7.900000     4.400000      7.900000     4.400000
+
+📌 Distribusi Class:
+Class
+Iris-setosa        50
+Iris-versicolor    50
+Iris-virginica     50
+Name: count, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># menampilkan distribusi data dalam bentuk histogram</span>
+<span class="n">df_combined</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span> <span class="n">bins</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s2">&quot;Distribusi Data Iris&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/cc50cd3bbc635c873fb49ba1b28eb1b1b9bfa9341d4efd2a0fff98e3f067c043.png" src="_images/cc50cd3bbc635c873fb49ba1b28eb1b1b9bfa9341d4efd2a0fff98e3f067c043.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># menampilkan distribusi data menggunakan boxplot</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">df_combined</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">,</span> <span class="s2">&quot;Class&quot;</span><span class="p">]))</span>  <span class="c1"># Hapus kolom non-numerik</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Boxplot Data Iris&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="mi">45</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/570a63b87c4797227ad89238c978ecf0f3caad45ee84abc06dc97839ca893e32.png" src="_images/570a63b87c4797227ad89238c978ecf0f3caad45ee84abc06dc97839ca893e32.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># menampilkan hubungan antar fitur berdasarkan kategori kelas</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">pairplot</span><span class="p">(</span><span class="n">df_combined</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s2">&quot;Class&quot;</span><span class="p">,</span> <span class="n">diag_kind</span><span class="o">=</span><span class="s2">&quot;kde&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/a4739c885d75fd1a022b870c2cf3a114f7cb5d383683d58dd12fc44565b48fb6.png" src="_images/a4739c885d75fd1a022b870c2cf3a114f7cb5d383683d58dd12fc44565b48fb6.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+
+<span class="c1"># Pilih hanya kolom numerik</span>
+<span class="n">df_numeric</span> <span class="o">=</span> <span class="n">df_combined</span><span class="o">.</span><span class="n">select_dtypes</span><span class="p">(</span><span class="n">include</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;number&#39;</span><span class="p">])</span>
+
+<span class="c1"># menampilkan hubungan antar fitur dalam bentuk heatmap</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">df_numeric</span><span class="o">.</span><span class="n">corr</span><span class="p">(),</span> <span class="n">annot</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;coolwarm&quot;</span><span class="p">,</span> <span class="n">fmt</span><span class="o">=</span><span class="s2">&quot;.2f&quot;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Heatmap Korelasi Antar Fitur&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/0bed2bc38e5557e6e96be142a138daf6a140f80aeb45f19cb1410061a4901c7d.png" src="_images/0bed2bc38e5557e6e96be142a138daf6a140f80aeb45f19cb1410061a4901c7d.png" />
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="intro.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Welcome to your Jupyter Book</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
